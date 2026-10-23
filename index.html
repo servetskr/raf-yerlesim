@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Depo Raf Yerleşimi</title>
+<meta name="description" content="Depo raf yerleşimi: mevcut alan ve kurulum sonrası görünüm, 5 raf grubu ve ölçüleri.">
+<meta property="og:title" content="Depo Raf Yerleşimi">
+<meta property="og:description" content="Mevcut alan ve kurulum sonrası görünüm · 5 raf grubu">
+<meta property="og:image" content="g/s1_v3-960.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="g/s1_v3-1920.webp" imagesrcset="g/s1_v3-960.webp 960w, g/s1_v3-1920.webp 1920w" imagesizes="100vw">
+<style>
+:root{
+  --zemin:#f4f4f1; --yuzey:#ffffff; --metin:#232323; --ikincil:#6b6b66; --cizgi:#dcdcd6;
+  --vurgu:#BCCB0A; --koyu:#232323; --antrasit:#383e42; --bordo:#A72920;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --zemin:#191918; --yuzey:#222220; --metin:#ecece8; --ikincil:#a3a39c; --cizgi:#34342f; }
+}
+:root[data-theme="dark"]{ --zemin:#191918; --yuzey:#222220; --metin:#ecece8; --ikincil:#a3a39c; --cizgi:#34342f; }
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--zemin);color:var(--metin);font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+img{display:block;width:100%;height:auto}
+.kap{max-width:1280px;margin:0 auto;padding:0 24px}
+@media (max-width:640px){.kap{padding:0 16px}}
+
+/* kapak */
+.kapak{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#232323}
+.kapak img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.kapak::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,18,.15) 0%,rgba(20,20,18,0) 40%,rgba(20,20,18,.78) 100%)}
+.kapak .ic{position:relative;z-index:1;padding:0 24px 56px;max-width:1280px;margin:0 auto;width:100%}
+.marka{position:absolute;top:24px;left:24px;z-index:1;font-weight:800;letter-spacing:-.02em;font-size:20px;color:#fff}
+.marka b{color:var(--vurgu)}
+.kapak h1{font-size:clamp(36px,6vw,76px);font-weight:800;letter-spacing:-.035em;line-height:1.02}
+.kapak p{margin-top:14px;font-size:clamp(15px,1.6vw,19px);color:#e6e6e0;max-width:640px}
+
+/* bolumler */
+section{padding:88px 0 0}
+.bas{display:flex;gap:18px;align-items:baseline;margin-bottom:22px;flex-wrap:wrap}
+.no{font-weight:800;color:var(--ikincil);font-size:15px;font-variant-numeric:tabular-nums;min-width:28px}
+h2{font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.025em;line-height:1.1}
+.alt{color:var(--ikincil);font-size:15px;margin-top:6px;max-width:720px}
+
+/* ozet tablo */
+.tablo{width:100%;border-collapse:collapse;font-size:15px;background:var(--yuzey);border-radius:14px;overflow:hidden}
+.tablo th,.tablo td{text-align:left;padding:14px 16px;white-space:nowrap;border-bottom:1px solid var(--cizgi);font-variant-numeric:tabular-nums}
+.tablo th{font-size:12px;font-weight:700;color:var(--ikincil)}
+.tablo tr:last-child td{border-bottom:0}
+.tablo td:first-child{font-weight:700}
+.kayan{overflow-x:auto;border-radius:14px}
+
+/* once-sonra */
+.os{position:relative;border-radius:14px;overflow:hidden;background:#ddd;aspect-ratio:20/9;user-select:none;-webkit-user-select:none}
+.os img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.os .ust{clip-path:inset(0 calc(100% - var(--k,50%)) 0 0)}
+.os .ayrac{position:absolute;top:0;bottom:0;left:var(--k,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.os .ayrac::after{content:"";position:absolute;top:50%;left:50%;width:42px;height:42px;margin:-21px 0 0 -21px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.os .ayrac::before{content:"‹ ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;font-weight:800;color:#232323;font-size:16px;letter-spacing:2px;white-space:nowrap}
+.os input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;touch-action:pan-y}
+.etk{position:absolute;bottom:14px;z-index:2;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;background:rgba(20,20,18,.7);color:#fff;pointer-events:none}
+.etk.sol{left:14px}.etk.sag{right:14px;background:var(--vurgu);color:#232323}
+.ipucu{font-size:13px;color:var(--ikincil);margin-top:10px}
+
+/* raf kartlari */
+.raf{display:grid;gap:14px}
+.foto{border-radius:14px;overflow:hidden;background:var(--yuzey)}
+.ikili{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:800px){.ikili{grid-template-columns:1fr}}
+.foto figcaption{font-size:13px;color:var(--ikincil);padding:10px 14px}
+.olcu{background:var(--yuzey);border-radius:14px;padding:20px 20px 18px}
+.gozler{display:flex;gap:3px;height:34px}
+.gozler div{background:var(--antrasit);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;border-radius:4px;min-width:0;overflow:hidden;font-variant-numeric:tabular-nums}
+.toplam{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:13px;color:var(--ikincil)}
+.toplam::before,.toplam::after{content:"";flex:1;height:1px;background:var(--cizgi)}
+.degerler{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media (max-width:640px){.degerler{grid-template-columns:1fr 1fr}}
+.deger span{display:block;font-size:12px;color:var(--ikincil);font-weight:600}
+.deger b{font-size:20px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+
+/* teknik */
+.renkler{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.renkler{grid-template-columns:1fr}}
+.renk{background:var(--yuzey);border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center}
+.renk i{width:56px;height:56px;border-radius:10px;flex:none}
+.renk b{display:block;font-weight:800}
+.renk span{font-size:13px;color:var(--ikincil)}
+.not{background:var(--yuzey);border-left:4px solid var(--vurgu);border-radius:10px;padding:16px 18px;margin-top:14px;font-size:15px}
+footer{padding:80px 0 48px;color:var(--ikincil);font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--metin);font-weight:800}
+.gor{opacity:1}
+html.js .gor{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+html.js .gor.acik{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .gor{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="kapak">
+  <img src="g/s1_v3-1920.webp" srcset="g/s1_v3-960.webp 960w, g/s1_v3-1920.webp 1920w" sizes="100vw" alt="Ana koridorda kurulmuş antrasit ve kırmızı palet rafları" fetchpriority="high">
+  <div class="marka">belirgin<b>.</b></div>
+  <div class="ic">
+    <h1>Depo raf yerleşimi</h1>
+    <p>Mevcut alan ve kurulum sonrası görünüm. 5 raf grubu, proje çizimlerindeki ölçülerle.</p>
+  </div>
+</header>
+
+<main class="kap">
+
+<section class="gor">
+  <div class="bas"><span class="no">01</span><div><h2>Raf grupları</h2><p class="alt">Dikmeler antrasit (RAL 7016), kirişler kırmızı (RAL 3000). Tüm ölçüler milimetre.</p></div></div>
+  <div class="kayan"><table class="tablo">
+    <thead><tr><th>Grup</th><th>Uzunluk</th><th>Yükseklik</th><th>Derinlik</th><th>Göz</th><th>Kiriş seviyesi</th><th>Konum</th></tr></thead>
+    <tbody>
+      <tr><td>1. grup</td><td>16 000</td><td>6 500</td><td>2 × 1 050, sırt sırta</td><td>6</td><td>4</td><td>Ana koridor, ön</td></tr>
+      <tr><td>2. grup</td><td>21 000</td><td>6 500</td><td>1 050</td><td>7</td><td>4</td><td>Ana koridor, duvar boyu</td></tr>
+      <tr><td>3. grup</td><td>6 000</td><td>4 500</td><td>1 050</td><td>2</td><td>2</td><td>Ana koridor, arka</td></tr>
+      <tr><td>4. grup uzun</td><td>14 000</td><td>4 500</td><td>1 050</td><td>5</td><td>2</td><td>Pencereli duvar</td></tr>
+      <tr><td>4. grup kısa</td><td>13 500</td><td>4 500</td><td>1 050</td><td>5</td><td>2</td><td>Makine hattı önü</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="gor">
+  <div class="bas"><span class="no">02</span><div><h2>Ana koridor</h2><p class="alt">1. grup sarı zemin çizgisi boyunca, 2. grup sağ duvar boyunca.</p></div></div>
+  <div class="os" style="--k:50%">
+    <img src="g/s1_v3-1920.webp" srcset="g/s1_v3-960.webp 960w, g/s1_v3-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="Kurulum sonrası ana koridor" loading="lazy">
+    <img class="ust" src="g/s1_once-1920.webp" srcset="g/s1_once-960.webp 960w, g/s1_once-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="Mevcut ana koridor" loading="lazy">
+    <span class="etk sol">Mevcut</span><span class="etk sag">Kurulum sonrası</span>
+    <div class="ayrac"></div>
+    <input type="range" min="0" max="100" value="50" aria-label="Mevcut ve kurulum sonrası görünümü karşılaştır">
+  </div>
+  <p class="ipucu">Karşılaştırmak için görselin üzerinde sağa sola kaydırın.</p>
+</section>
+
+<div data-raf="grup1"></div>
+
+<div data-raf="grup2"></div>
+
+<section class="gor">
+  <div class="bas"><span class="no">05</span><div><h2>Ana koridor, arka bölüm</h2><p class="alt">3. grup. Bu alan mevcut fotoğraf açılarında 1. grubun arkasında kaldığı için farklı bir açıdan, temsili olarak gösterilmiştir.</p></div></div>
+  <figure class="foto"><img src="g/g3_temsili-1920.webp" srcset="g/g3_temsili-960.webp 960w, g/g3_temsili-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="3. grup rafın temsili görünümü" loading="lazy"><figcaption>Temsili görünüm</figcaption></figure>
+</section>
+
+<div data-raf="grup3"></div>
+
+<section class="gor">
+  <div class="bas"><span class="no">03</span><div><h2>Makine hattı önü</h2><p class="alt">4. grup kısa sıra, makine hattına paralel.</p></div></div>
+  <div class="os" style="--k:50%">
+    <img src="g/s2_v3-1920.webp" srcset="g/s2_v3-960.webp 960w, g/s2_v3-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="Kurulum sonrası makine hattı önü" loading="lazy">
+    <img class="ust" src="g/s2_once-1920.webp" srcset="g/s2_once-960.webp 960w, g/s2_once-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="Mevcut makine hattı önü" loading="lazy">
+    <span class="etk sol">Mevcut</span><span class="etk sag">Kurulum sonrası</span>
+    <div class="ayrac"></div>
+    <input type="range" min="0" max="100" value="50" aria-label="Mevcut ve kurulum sonrası görünümü karşılaştır">
+  </div>
+</section>
+
+<div data-raf="grup4_kisa"></div>
+
+<section class="gor">
+  <div class="bas"><span class="no">04</span><div><h2>Pencereli duvar</h2><p class="alt">4. grup uzun sıra, sırtı duvara dayalı.</p></div></div>
+  <div class="os" style="--k:50%">
+    <img src="g/s3_v3-1920.webp" srcset="g/s3_v3-960.webp 960w, g/s3_v3-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="Kurulum sonrası pencereli duvar" loading="lazy">
+    <img class="ust" src="g/s3_once-1920.webp" srcset="g/s3_once-960.webp 960w, g/s3_once-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="Mevcut pencereli duvar" loading="lazy">
+    <span class="etk sol">Mevcut</span><span class="etk sag">Kurulum sonrası</span>
+    <div class="ayrac"></div>
+    <input type="range" min="0" max="100" value="50" aria-label="Mevcut ve kurulum sonrası görünümü karşılaştır">
+  </div>
+</section>
+
+<div data-raf="grup4_uzun"></div>
+
+<section class="gor">
+  <div class="bas"><span class="no">11</span><div><h2>Renk ve uygulama</h2></div></div>
+  <div class="renkler">
+    <div class="renk"><i style="background:#383e42"></i><div><b>Antrasit gri · RAL 7016</b><span>Dikmeler, yan çerçeveler, çaprazlar</span></div></div>
+    <div class="renk"><i style="background:#A72920"></i><div><b>Alev kırmızısı · RAL 3000</b><span>Yük kirişleri</span></div></div>
+  </div>
+  <div class="not">Uygulama öncesi: 6 500 mm yüksekliğindeki 1. ve 2. grup için salonun kiriş altı ve saçak yüksekliği yerinde ölçülmelidir. Fotoğraflardan yapılan tahminde yan duvar dibindeki yükseklik yaklaşık 5 500 mm görünmektedir.</div>
+  <div class="not">Görseller sunum amaçlıdır. Göz genişlikleri, uzunluk, yükseklik ve derinlik proje çizimlerinden alınmıştır; kiriş aralıkları çizim ölçeğinden okunmuştur (±30 mm). Ekranda görülen renk tonları nihai RAL kartelasından teyit edilmelidir.</div>
+</section>
+
+<footer><span><b>belirgin</b> · Depo raf yerleşimi</span><span>Ekim 2026</span></footer>
+</main>
+
+<script>
+document.documentElement.classList.add('js');
+var RAF=[
+ {no:'06',ad:'1. grup',g:'grup1',detaysiz:1,alt:'Sırt sırta iki sıra, aralarında 250 mm. Ana koridorun önünde, sarı zemin çizgisi boyunca.',goz:[2700,2700,2700,2700,2700,1800],top:'16 000',y:'6 500',d:'2 × 1 050 + 250',k:'2 100 · 1 630 · 1 620 · 1 150'},
+ {no:'07',ad:'2. grup',g:'grup2',alt:'Tek sıra, sağ duvar boyunca.',goz:[2700,2700,2700,2700,2700,3300,3300],top:'21 000',y:'6 500',d:'1 050',k:'2 100 · 1 630 · 1 620 · 1 150'},
+ {no:'08',ad:'3. grup',g:'grup3',alt:'Tek sıra, ana koridorun arka bölümü.',goz:[3000,3000],top:'6 000',y:'4 500',d:'1 050',k:'2 180 · 2 320'},
+ {no:'09',ad:'4. grup, uzun sıra',g:'grup4_uzun',detaysiz:1,alt:'Tek sıra, pencereli duvar boyunca.',goz:[2700,2700,2700,2700,2700],top:'14 000',y:'4 500',d:'1 050',k:'2 180 · 2 320'},
+ {no:'10',ad:'4. grup, kısa sıra',g:'grup4_kisa',detaysiz:1,alt:'Tek sıra, makine hattının önünde.',goz:[2700,2700,2700,2700,2000],top:'13 500',y:'4 500',d:'1 050',k:'2 180 · 2 320'}
+];
+function im(n,a){return '<img src="g/'+n+'-960.webp" srcset="g/'+n+'-960.webp 960w, g/'+n+'-1920.webp 1920w" sizes="(max-width:1280px) 100vw, 1232px" alt="'+a+'" loading="lazy">';}
+function imk(n,a){return '<img src="g/'+n+'-960.webp" srcset="g/'+n+'-960.webp 960w, g/'+n+'-1920.webp 1920w" sizes="(max-width:800px) 100vw, 610px" alt="'+a+'" loading="lazy">';}
+try{
+
+ RAF.forEach(function(r){
+  var gz=r.goz.map(function(w){return '<div style="flex:'+w+'">'+w+'</div>';}).join('');
+  var h='<section class="gor"><div class="bas"><span class="no">'+r.no+'</span><div><h2>'+r.ad+'</h2><p class="alt">'+r.alt+'</p></div></div>'+
+   '<div class="raf"><figure class="foto">'+im(r.g+'_studyo',r.ad+' önden görünüm')+'<figcaption>Önden görünüm</figcaption></figure>'+
+   '<div class="olcu"><div class="gozler" aria-label="Göz genişlikleri">'+gz+'</div><div class="toplam">Toplam '+r.top+' mm</div>'+
+   '<div class="degerler"><div class="deger"><span>Yükseklik</span><b>'+r.y+'</b></div><div class="deger"><span>Derinlik</span><b>'+r.d+'</b></div>'+
+   '<div class="deger"><span>Göz</span><b>'+r.goz.length+'</b></div><div class="deger"><span>Kiriş aralıkları (alttan)</span><b style="font-size:15px">'+r.k+'</b></div></div></div>'+
+   '<figure class="foto">'+im(r.g+'_yapi',r.ad+' kiriş yapısı')+'<figcaption>'+(r.g=='grup4_kisa'?'Her katta 3 kiriş (ön, orta, arka) ve her gözde 1 destek kirişi':'Her katta 3 kiriş: ön, orta, arka')+'</figcaption></figure>'+
+   (r.detaysiz?'<figure class="foto">'+im(r.g+'_olcek',r.ad+' ölçek')+'<figcaption>Ölçek: insan boyu 1,75 m</figcaption></figure>':
+   '<div class="ikili"><figure class="foto">'+imk(r.g+'_olcek',r.ad+' ölçek')+'<figcaption>Ölçek: insan boyu 1,75 m</figcaption></figure>'+
+   '<figure class="foto">'+imk(r.g+'_detay',r.ad+' detay')+'<figcaption>Taban plakası, dikme ve kiriş bağlantısı</figcaption></figure></div>')+'</div></section>';
+  var yer=document.querySelector('[data-raf="'+r.g+'"]'); if(yer) yer.outerHTML=h;
+ });
+ document.querySelectorAll('section .no').forEach(function(n,i){n.textContent=(i+1<10?'0':'')+(i+1);});
+}catch(e){}
+try{
+ document.querySelectorAll('.os').forEach(function(o){
+  var i=o.querySelector('input');
+  i.addEventListener('input',function(){o.style.setProperty('--k',i.value+'%');});
+ });
+}catch(e){}
+try{
+ var gs=document.querySelectorAll('.gor');
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('acik');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  gs.forEach(function(g){io.observe(g);});
+ } else gs.forEach(function(g){g.classList.add('acik');});
+ setTimeout(function(){document.querySelectorAll('.gor').forEach(function(g){g.classList.add('acik');});},3500);
+}catch(e){document.querySelectorAll('.gor').forEach(function(g){g.classList.add('acik');});}
+</script>
+</body>
+</html>
