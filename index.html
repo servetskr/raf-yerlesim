@@ -191,7 +191,7 @@ html.js .gor.acik{opacity:1;transform:none}
 document.documentElement.classList.add('js');
 var RAF=[
  {no:'06',ad:'1. grup',g:'grup1',detaysiz:1,alt:'Sırt sırta iki sıra, aralarında 250 mm. Ana koridorun önünde, sarı zemin çizgisi boyunca.',goz:[2700,2700,2700,2700,2700,1800],top:'16 000',y:'6 500',d:'2 × 1 050 + 250',k:'2 100 · 1 630 · 1 620 · 1 150'},
- {no:'07',ad:'2. grup',g:'grup2',alt:'Tek sıra, sağ duvar boyunca.',goz:[2700,2700,2700,2700,2700],top:'14 200',y:'6 500',d:'1 050',k:'2 100 · 1 630 · 1 620 · 1 150'},
+ {no:'07',ad:'2. grup',g:'grup2',alt:'Tek sıra, sağ duvar boyunca. Rafta palet üstünde koli; plastik kasalar (24 adet, 2 palet) rafın yanında, raftan bağımsız.',goz:[2700,2700,2700,2700,2700],top:'14 200',y:'6 500',d:'1 050',k:'2 100 · 1 630 · 1 620 · 1 150'},
  {no:'08',ad:'3. grup',g:'grup3',alt:'Tek sıra, ana koridorun arka bölümü.',goz:[3000,3000],top:'6 000',y:'4 500',d:'1 050',k:'2 180 · 2 320'},
  {no:'09',ad:'4. grup, uzun sıra',g:'grup4_uzun',detaysiz:1,alt:'Tek sıra, pencereli duvar boyunca.',goz:[2700,2700,2700,2700,2700],top:'14 000',y:'4 500',d:'1 050',k:'2 180 · 2 320'},
  {no:'10',ad:'4. grup, kısa sıra',g:'grup4_kisa',detaysiz:1,alt:'Tek sıra, makine hattının önünde.',goz:[2700,2700,2700,2700,2000],top:'13 500',y:'4 500',d:'1 050',k:'2 180 · 2 320'}
@@ -203,7 +203,7 @@ try{
  RAF.forEach(function(r){
   var gz=r.goz.map(function(w){return '<div style="flex:'+w+'">'+w+'</div>';}).join('');
   var h='<section class="gor"><div class="bas"><span class="no">'+r.no+'</span><div><h2>'+r.ad+'</h2><p class="alt">'+r.alt+'</p></div></div>'+
-   '<div class="raf"><figure class="foto">'+im(r.g+'_studyo',r.ad+' önden görünüm')+'<figcaption>Önden görünüm</figcaption></figure>'+
+   '<div class="raf"><figure class="foto">'+im(r.g+'_studyo',r.ad+' önden görünüm')+'<figcaption>'+(r.g=='grup2'?'Önden görünüm · solda raftan bağımsız 6 plastik kasa (2 palet, 120×80)':'Önden görünüm')+'</figcaption></figure>'+
    '<div class="olcu"><div class="gozler" aria-label="Göz genişlikleri">'+gz+'</div><div class="toplam">Toplam '+r.top+' mm</div>'+
    '<div class="degerler"><div class="deger"><span>Yükseklik</span><b>'+r.y+'</b></div><div class="deger"><span>Derinlik</span><b>'+r.d+'</b></div>'+
    '<div class="deger"><span>Göz</span><b>'+(r.goz.length*r.k.split('·').length*(r.g=='grup1'?2:1))+'</b><small style="display:block;font-size:12px;opacity:.7">'+r.goz.length+' bölme × '+r.k.split('·').length+' kat'+(r.g=='grup1'?' × 2 sıra':'')+'</small></div><div class="deger"><span>Kiriş aralıkları (alttan)</span><b style="font-size:15px">'+r.k+'</b></div></div></div>'+
