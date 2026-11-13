@@ -116,11 +116,11 @@ html.js .gor.acik{opacity:1;transform:none}
   <div class="kayan"><table class="tablo">
     <thead><tr><th>Grup</th><th>Uzunluk</th><th>Yükseklik</th><th>Derinlik</th><th>Göz</th><th>Kiriş seviyesi</th><th>Konum</th></tr></thead>
     <tbody>
-      <tr><td>1. grup</td><td>16 000</td><td>6 500</td><td>2 × 1 050, sırt sırta</td><td>6</td><td>4</td><td>Ana koridor, ön</td></tr>
-      <tr><td>2. grup</td><td>21 000</td><td>6 500</td><td>1 050</td><td>7</td><td>4</td><td>Ana koridor, duvar boyu</td></tr>
-      <tr><td>3. grup</td><td>6 000</td><td>4 500</td><td>1 050</td><td>2</td><td>2</td><td>Ana koridor, arka</td></tr>
-      <tr><td>4. grup uzun</td><td>14 000</td><td>4 500</td><td>1 050</td><td>5</td><td>2</td><td>Pencereli duvar</td></tr>
-      <tr><td>4. grup kısa</td><td>13 500</td><td>4 500</td><td>1 050</td><td>5</td><td>2</td><td>Makine hattı önü</td></tr>
+      <tr><td>1. grup</td><td>16 000</td><td>6 500</td><td>2 × 1 050, sırt sırta</td><td>48 <small>(6 × 4 × 2 sıra)</small></td><td>4</td><td>Ana koridor, ön</td></tr>
+      <tr><td>2. grup</td><td>14 200</td><td>6 500</td><td>1 050</td><td>20 <small>(5 × 4)</small></td><td>4</td><td>Ana koridor, duvar boyu</td></tr>
+      <tr><td>3. grup</td><td>6 000</td><td>4 500</td><td>1 050</td><td>4 <small>(2 × 2)</small></td><td>2</td><td>Ana koridor, arka</td></tr>
+      <tr><td>4. grup uzun</td><td>14 000</td><td>4 500</td><td>1 050</td><td>10 <small>(5 × 2)</small></td><td>2</td><td>Pencereli duvar</td></tr>
+      <tr><td>4. grup kısa</td><td>13 500</td><td>4 500</td><td>1 050</td><td>10 <small>(5 × 2)</small></td><td>2</td><td>Makine hattı önü</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -191,7 +191,7 @@ html.js .gor.acik{opacity:1;transform:none}
 document.documentElement.classList.add('js');
 var RAF=[
  {no:'06',ad:'1. grup',g:'grup1',detaysiz:1,alt:'Sırt sırta iki sıra, aralarında 250 mm. Ana koridorun önünde, sarı zemin çizgisi boyunca.',goz:[2700,2700,2700,2700,2700,1800],top:'16 000',y:'6 500',d:'2 × 1 050 + 250',k:'2 100 · 1 630 · 1 620 · 1 150'},
- {no:'07',ad:'2. grup',g:'grup2',alt:'Tek sıra, sağ duvar boyunca.',goz:[2700,2700,2700,2700,2700,3300,3300],top:'21 000',y:'6 500',d:'1 050',k:'2 100 · 1 630 · 1 620 · 1 150'},
+ {no:'07',ad:'2. grup',g:'grup2',alt:'Tek sıra, sağ duvar boyunca.',goz:[2700,2700,2700,2700,2700],top:'14 200',y:'6 500',d:'1 050',k:'2 100 · 1 630 · 1 620 · 1 150'},
  {no:'08',ad:'3. grup',g:'grup3',alt:'Tek sıra, ana koridorun arka bölümü.',goz:[3000,3000],top:'6 000',y:'4 500',d:'1 050',k:'2 180 · 2 320'},
  {no:'09',ad:'4. grup, uzun sıra',g:'grup4_uzun',detaysiz:1,alt:'Tek sıra, pencereli duvar boyunca.',goz:[2700,2700,2700,2700,2700],top:'14 000',y:'4 500',d:'1 050',k:'2 180 · 2 320'},
  {no:'10',ad:'4. grup, kısa sıra',g:'grup4_kisa',detaysiz:1,alt:'Tek sıra, makine hattının önünde.',goz:[2700,2700,2700,2700,2000],top:'13 500',y:'4 500',d:'1 050',k:'2 180 · 2 320'}
@@ -206,7 +206,7 @@ try{
    '<div class="raf"><figure class="foto">'+im(r.g+'_studyo',r.ad+' önden görünüm')+'<figcaption>Önden görünüm</figcaption></figure>'+
    '<div class="olcu"><div class="gozler" aria-label="Göz genişlikleri">'+gz+'</div><div class="toplam">Toplam '+r.top+' mm</div>'+
    '<div class="degerler"><div class="deger"><span>Yükseklik</span><b>'+r.y+'</b></div><div class="deger"><span>Derinlik</span><b>'+r.d+'</b></div>'+
-   '<div class="deger"><span>Göz</span><b>'+r.goz.length+'</b></div><div class="deger"><span>Kiriş aralıkları (alttan)</span><b style="font-size:15px">'+r.k+'</b></div></div></div>'+
+   '<div class="deger"><span>Göz</span><b>'+(r.goz.length*r.k.split('·').length*(r.g=='grup1'?2:1))+'</b><small style="display:block;font-size:12px;opacity:.7">'+r.goz.length+' bölme × '+r.k.split('·').length+' kat'+(r.g=='grup1'?' × 2 sıra':'')+'</small></div><div class="deger"><span>Kiriş aralıkları (alttan)</span><b style="font-size:15px">'+r.k+'</b></div></div></div>'+
    '<figure class="foto">'+im(r.g+'_yapi',r.ad+' kiriş yapısı')+'<figcaption>'+(r.g=='grup4_kisa'?'Her katta 3 kiriş (ön, orta, arka) ve her gözde 1 destek kirişi':'Her katta 3 kiriş: ön, orta, arka')+'</figcaption></figure>'+
    (r.detaysiz?'<figure class="foto">'+im(r.g+'_olcek',r.ad+' ölçek')+'<figcaption>Ölçek: insan boyu 1,75 m</figcaption></figure>':
    '<div class="ikili"><figure class="foto">'+imk(r.g+'_olcek',r.ad+' ölçek')+'<figcaption>Ölçek: insan boyu 1,75 m</figcaption></figure>'+
